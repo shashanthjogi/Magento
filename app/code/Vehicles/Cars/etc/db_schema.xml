@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+   <table name="vehicles_cars" resource="default" engine="innodb" comment="Vehicles Cars">
+   <column xsi:type="int" name="entity_id" unsigned="false" nullable="false" identity="true" />
+      
+      <column xsi:type="int" name="empid" nullable="false" comment="Empid" />
+      <column xsi:type="varchar" name="fname" nullable="false" comment="first name" />
+      <column xsi:type="varchar" name="lname" nullable="false" comment="last name" />
+      <column xsi:type="varchar" name="email" nullable="false" comment="Email" />
+      <column xsi:type="varchar" name="cname" nullable="false" comment="companyname" />
+      <column xsi:type="varchar" name="department" nullable="false" comment="Department name" />
+      <column xsi:type="varchar" name="occupation" nullable="false" comment="occupation" />
+      <column xsi:type="varchar" name="mobile" nullable="false" comment="mobile no" />
+      <column xsi:type="varchar" name="address" nullable="false" comment="address" />
+      <column xsi:type="date" name="date" nullable="false" comment="joining date" />
+      <column xsi:type="date" name="dob" nullable="false"  comment="birthday date" />
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="entity_id" />
+      </constraint>
+   </table>
+</schema>

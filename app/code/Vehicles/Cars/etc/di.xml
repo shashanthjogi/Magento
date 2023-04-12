@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="afterGetName" type="Vehicles\Cars\Plugin\Product" sortOrder="1" />
+    </type>
+
+     <type name="Magento\Checkout\Model\Cart">
+        <plugin name="beforeAddProduct" type="Vehicles\Cars\Plugin\Cart" sortOrder="1" />
+    </type>
+    <preference for="Magento\Sales\Block\Order\View" type="Vehicles\Cars\Block\Order\View"/>
+    <preference for="Magento\Sales\Block\Order" type="Vehicles\Cars\Model\Order"/>
+    <preference for="Vehicles\Cars\Api\DemoInterface" type="Vehicles\Cars\Model\DemoService"/>
+</config>
+

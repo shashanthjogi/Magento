@@ -1,0 +1,24 @@
+{
+    "md_helloworld": {
+        "column": {
+            "id": true,
+            "author_name": true,
+            "email": true,
+            "description": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "vehicles_cars": {
+        "column": {
+            "id": true,
+            "author_name": true,
+            "email": true,
+            "description": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

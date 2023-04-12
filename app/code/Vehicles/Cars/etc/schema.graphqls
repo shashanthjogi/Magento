@@ -1,0 +1,41 @@
+# Copyright © Magento, Inc. All rights reserved.
+# See COPYING.txt for license details.
+
+type Query
+{
+    pickupStore:pickupStoreOutput @resolver(class:"Vehicles\\Cars\\Model\\Resolver\\Store") @doc(description:"List of Pickup Stores")
+}
+type pickupStoreOutput
+{
+total_count:Int @doc(description:"Total Stores"),
+items:[pickupStores] @doc(description:"Store Data")
+}
+
+type pickupStores
+{
+    firstname:String @doc(description:"Store Name"),
+    lastname:String @doc(description:"Store Name"),
+    email:String @doc(description:"Store Email"),
+    telephone:String @doc(description:"Store telephone"),
+    city:String @doc(description:"Store City"),
+    state:String @doc(description:"Store state"),
+    Country:String @doc(description:"Store Country"),
+}
+
+type Mutation
+{
+    addData (input: dataInput! @doc(description:"To be filled by you")):
+    addDataOutput @resolver(class:"Vehicles\\Cars\\Model\\Resolver\\DisplayData")
+    @doc(description:"Mutation Output")
+}
+input dataInput
+{
+    groupName:String! @doc(description:"Enter the GroupName") 
+}
+ 
+ type addDataOutput
+ {
+    groupId:Int @doc(description:"Mutation Status") 
+    groupName:String @doc(description:"Mutation Message") 
+ }
+
